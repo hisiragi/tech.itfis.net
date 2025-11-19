@@ -21,11 +21,12 @@
                     <a href="/">ホーム</a>
                     <a href="/category/">カテゴリ</a>
                     <a href="/contact/">お問い合わせ</a>
-                    <a href="/gamingpc/">Gaming PC</a>
                 </nav>
                 <div class="header-actions">
-                    <form class="search-form" action="/" method="get" role="search">
-                        <input type="search" name="q" placeholder="サイト内を検索" aria-label="検索">
+                    <!-- 実際に Google の site: 検索を使うフォーム -->
+                    <form id="search-form" class="search-form" action="https://www.google.com/search" method="get" role="search" target="_blank" onsubmit="return prepareSearch(this);">
+                        <input type="search" name="q" id="search-q" placeholder="サイト内を検索" aria-label="検索">
+                        <input type="hidden" name="ie" value="utf-8">
                     </form>
                 </div>
             </div>
@@ -38,8 +39,42 @@
             </section>
 
             <section class="content-sample">
-                <!-- コンテンツのプレースホルダ -->
-                <p>ここに記事リストやドキュメントを掲載してください。</p>
+                <!-- ネストを深くして掲載領域をわかりやすくするサンプル構造 -->
+                <div class="catalog level-1">
+                    <article class="category">
+                        <h3 class="category-title">運用ドキュメント</h3>
+                        <div class="catalog level-2">
+                            <section class="subcategory">
+                                <h4 class="subcategory-title">サーバー運用</h4>
+                                <ul class="article-list">
+                                    <li><a href="#">監視設定ガイド</a></li>
+                                    <li><a href="#">バックアップ手順</a></li>
+                                    <li><a href="#">障害対応フロー</a></li>
+                                </ul>
+                            </section>
+                            <section class="subcategory">
+                                <h4 class="subcategory-title">ネットワーク</h4>
+                                <ul class="article-list">
+                                    <li><a href="#">VPN 設定メモ</a></li>
+                                    <li><a href="#">ファイアウォールルール例</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </article>
+
+                    <article class="category">
+                        <h3 class="category-title">開発・CI</h3>
+                        <div class="catalog level-2">
+                            <section class="subcategory">
+                                <h4 class="subcategory-title">CI/CD</h4>
+                                <ul class="article-list">
+                                    <li><a href="#">パイプライン構成例</a></li>
+                                    <li><a href="#">デプロイ手順</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
 
@@ -61,6 +96,22 @@
                 <small>© tech.itfis.net</small>
             </div>
         </footer>
+
+    <script>
+        // 検索フォーム送信時に query に site:tech.itfis.net を付与する
+        function prepareSearch(form){
+            var qElem = document.getElementById('search-q');
+            if(!qElem) return true;
+            var q = qElem.value.trim();
+            if(!q) return false; // 空検索は送らない
+            // site:tech.itfis.net が含まれていなければ追加
+            if(!/site:\s*tech\.itfis\.net/.test(q)){
+                q = q + ' site:tech.itfis.net';
+            }
+            qElem.value = q;
+            return true;
+        }
+    </script>
 
     </body>
 </html>
