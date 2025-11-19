@@ -46,6 +46,18 @@ html,body{height:100%;margin:0;font-family:'Noto Sans JP',system-ui,Arial,Helvet
 .quick-link{font-weight:700;color:#0b69ff;text-decoration:none}
 .quick-desc{margin:6px 0 0;color:#546070;font-size:0.95rem}
 
+/* お問い合わせボタン（クイックメニュー内） */
+.quick-contact{display:flex;justify-content:flex-end;margin-bottom:12px}
+.contact-btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block}
+.contact-btn:hover{opacity:0.95}
+
+/* レスポンシブ調整 */
+@media (max-width:800px){
+  .quick-contact{justify-content:center;margin-bottom:10px}
+  .contact-btn{width:100%;text-align:center}
+  .quick-item{padding:12px}
+}
+
 
 /* bottom-cta：2.png を背景に見せる */
 .bottom-cta{margin-top:40px;padding:48px 0;background-image:url('/2.png');background-size:cover;background-position:center;border-radius:8px;color:#fff}
