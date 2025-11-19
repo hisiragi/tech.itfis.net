@@ -1,12 +1,66 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset='UTF-8'>
-        <title>IT関連資料のtech.itfis.net</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>IT関連資料の tech.itfis.net</title>
         <link rel="icon" href="tech-itfis-net.png">
-        <favicon rel="icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
-<boby>
+    <body>
+
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="logo" href="/">
+                    <img src="tech-itfis-net.png" alt="tech.itfis.net ロゴ">
+                </a>
+                <nav class="main-nav" aria-label="メインナビゲーション">
+                    <a href="/">ホーム</a>
+                    <a href="/category/">カテゴリ</a>
+                    <a href="/contact/">お問い合わせ</a>
+                    <a href="/gamingpc/">Gaming PC</a>
+                </nav>
+                <div class="header-actions">
+                    <form class="search-form" action="/" method="get" role="search">
+                        <input type="search" name="q" placeholder="サイト内を検索" aria-label="検索">
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <main class="site-main container">
+            <section class="hero">
+                <h1>IT関連のドキュメントと資料を集めたサイト</h1>
+                <p>運用手順、チュートリアル、設定メモなどをわかりやすく整理します。</p>
+            </section>
+
+            <section class="content-sample">
+                <!-- コンテンツのプレースホルダ -->
+                <p>ここに記事リストやドキュメントを掲載してください。</p>
+            </section>
+        </main>
+
+        <!-- ページ一番下に 2.png のようなビジュアル要素を表示 -->
+        <section class="bottom-cta" role="region" aria-label="フッターのコールトゥアクション">
+            <div class="cta-overlay container">
+                <div class="cta-text">
+                    <h2>資料を探してますか？</h2>
+                    <p>必要な資料が見つからない場合はお問い合わせください。</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn primary" href="/contact/">お問い合わせ</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <small>© tech.itfis.net</small>
+            </div>
+        </footer>
+
+    </body>
+</html>
