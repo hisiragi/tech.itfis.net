@@ -20,7 +20,6 @@
                 <nav class="main-nav" aria-label="メインナビゲーション">
                     <a href="/">ホーム</a>
                     <a href="/category/">カテゴリ</a>
-                    <a href="/contact/">お問い合わせ</a>
                 </nav>
                 <div class="header-actions">
                     <!-- 実際に Google の site: 検索を使うフォーム -->
@@ -39,54 +38,37 @@
             </section>
 
             <section class="content-sample">
-                <!-- ネストを深くして掲載領域をわかりやすくするサンプル構造 -->
-                <div class="catalog level-1">
-                    <article class="category">
-                        <h3 class="category-title">運用ドキュメント</h3>
-                        <div class="catalog level-2">
-                            <section class="subcategory">
-                                <h4 class="subcategory-title">サーバー運用</h4>
-                                <ul class="article-list">
-                                    <li><a href="#">監視設定ガイド</a></li>
-                                    <li><a href="#">バックアップ手順</a></li>
-                                    <li><a href="#">障害対応フロー</a></li>
-                                </ul>
-                            </section>
-                            <section class="subcategory">
-                                <h4 class="subcategory-title">ネットワーク</h4>
-                                <ul class="article-list">
-                                    <li><a href="#">VPN 設定メモ</a></li>
-                                    <li><a href="#">ファイアウォールルール例</a></li>
-                                </ul>
-                            </section>
-                        </div>
-                    </article>
-
-                    <article class="category">
-                        <h3 class="category-title">開発・CI</h3>
-                        <div class="catalog level-2">
-                            <section class="subcategory">
-                                <h4 class="subcategory-title">CI/CD</h4>
-                                <ul class="article-list">
-                                    <li><a href="#">パイプライン構成例</a></li>
-                                    <li><a href="#">デプロイ手順</a></li>
-                                </ul>
-                            </section>
-                        </div>
-                    </article>
+                <!-- ホーム用のクイックメニュー（カテゴリ分けしないフラットリスト） -->
+                <!-- 編集しやすいように、以下のリスト項目を追加／変更してください -->
+                <div class="quick-menu">
+                    <ul>
+                        <li class="quick-item">
+                            <a class="quick-link" href="/category/servers/monitoring.html">監視設定ガイド</a>
+                            <p class="quick-desc">Zabbix/Prometheus を用いた監視設定の手順と例</p>
+                        </li>
+                        <li class="quick-item">
+                            <a class="quick-link" href="/category/backup/guide.html">バックアップ手順</a>
+                            <p class="quick-desc">定期バックアップ、リストア手順のまとめ</p>
+                        </li>
+                        <li class="quick-item">
+                            <a class="quick-link" href="/docs/network/vpn.html">VPN 設定メモ</a>
+                            <p class="quick-desc">社内接続用の VPN 設定メモと注意点</p>
+                        </li>
+                        <li class="quick-item">
+                            <a class="quick-link" href="https://www.google.com/search?q=パイプライン+site:tech.itfis.net" target="_blank">CI/CD の検索結果</a>
+                            <p class="quick-desc">site: 検索で CI/CD 関連の資料を素早く探します（外部リンク）</p>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>
 
-        <!-- ページ一番下に 2.png のようなビジュアル要素を表示 -->
-        <section class="bottom-cta" role="region" aria-label="フッターのコールトゥアクション">
+        <!-- ページ一番下に 2.png のようなビジュアル要素を表示（お問い合わせリンクは削除） -->
+        <section class="bottom-cta" role="region" aria-label="フッターのビジュアルエリア">
             <div class="cta-overlay container">
                 <div class="cta-text">
                     <h2>資料を探してますか？</h2>
-                    <p>必要な資料が見つからない場合はお問い合わせください。</p>
-                </div>
-                <div class="cta-actions">
-                    <a class="btn primary" href="/contact/">お問い合わせ</a>
+                    <p>必要な資料が見つからない場合はサイト内のクイックメニューから直接アクセスしてください。</p>
                 </div>
             </div>
         </section>

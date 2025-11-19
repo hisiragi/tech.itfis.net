@@ -39,6 +39,14 @@ html,body{height:100%;margin:0;font-family:'Noto Sans JP',system-ui,Arial,Helvet
 .article-list a{color:#0b69ff;text-decoration:none}
 .article-list a:hover{text-decoration:underline}
 
+/* フラットなクイックメニュー */
+.quick-menu{background:#fff;border:1px solid #eef2f9;border-radius:8px;padding:18px}
+.quick-menu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.quick-item{display:flex;flex-direction:column;padding:10px;border-radius:6px;background:#fcfeff;border:1px solid #f0f6ff}
+.quick-link{font-weight:700;color:#0b69ff;text-decoration:none}
+.quick-desc{margin:6px 0 0;color:#546070;font-size:0.95rem}
+
+
 /* bottom-cta：2.png を背景に見せる */
 .bottom-cta{margin-top:40px;padding:48px 0;background-image:url('/2.png');background-size:cover;background-position:center;border-radius:8px;color:#fff}
 .bottom-cta .cta-overlay{display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.25));padding:24px;border-radius:6px}
