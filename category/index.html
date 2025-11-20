@@ -12,7 +12,7 @@
     </head>
     <body>
 
-        <header class="site-header">
+                <header class="site-header">
             <div class="container header-inner">
                 <a class="logo" href="/">
                     <img src="tech-itfis-net.png" alt="tech.itfis.net ロゴ">
@@ -36,7 +36,6 @@
                 </div>
             </div>
         </header>
-
         <main class="site-main container">
             <section class="hero">
                 <h1>IT関連のドキュメントと資料を集めたサイト</h1>
@@ -58,7 +57,11 @@
                         </li>
                         <li class="quick-item">
                             <a class="quick-link" href="/docs/network/vpn.html">VPN 設定メモ</a>
-                            <p class="quick-desc">社内接続用の VPN 設定メモと注意点</p>
+                            <p class="quick-desc">OpenVPN と IPsec を使った VPN 構築手順</p>
+                        </li>
+                        <li class="quick-item">
+                            <a class="quick-link" href="/docs/devops/ci-cd.html">CI/CD パイプライン</a>
+                            <p class="quick-desc">Jenkins/GitHub Actions を使った CI/CD の例</p>
                         </li>
                         <li class="quick-item">
                             <a class="quick-link" href="https://www.google.com/search?q=パイプライン+site:tech.itfis.net" target="_blank">CI/CD の検索結果</a>
@@ -68,43 +71,10 @@
                 </div>
             </section>
         </main>
-
-        
-
         <footer class="site-footer">
-            <div class="container">
-                <small>© tech.itfis.net</small>
+            <div class="container footer-inner">
+                <p>&copy; 2024 tech.itfis.net</p>
             </div>
         </footer>
-
-    <script>
-        // 検索フォーム送信時に query に site:tech.itfis.net を付与する
-        function prepareSearch(form){
-            var qElem = document.getElementById('search-q');
-            if(!qElem) return true;
-            var q = qElem.value.trim();
-            if(!q) return false; // 空検索は送らない
-            // site:tech.itfis.net が含まれていなければ追加
-            if(!/site:\s*tech\.itfis\.net/.test(q)){
-                q = q + ' site:tech.itfis.net';
-            }
-            qElem.value = q;
-            return true;
-        }
-        // ハンバーガーメニュー開閉
-        function toggleMenu(button){
-            var nav = document.querySelector('.main-nav');
-            if(!nav) return;
-            var expanded = button.getAttribute('aria-expanded') === 'true';
-            if(expanded){
-                nav.classList.remove('open');
-                button.setAttribute('aria-expanded','false');
-            } else {
-                nav.classList.add('open');
-                button.setAttribute('aria-expanded','true');
-            }
-        }
-    </script>
-
     </body>
 </html>
