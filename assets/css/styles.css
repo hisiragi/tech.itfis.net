@@ -47,23 +47,39 @@ html,body{height:100%;margin:0;font-family:'Noto Sans JP',system-ui,Arial,Helvet
 .quick-desc{margin:6px 0 0;color:#546070;font-size:0.95rem}
 
 /* お問い合わせボタン（クイックメニュー内） */
-.quick-contact{display:flex;justify-content:flex-end;margin-bottom:12px}
-.contact-btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block}
-.contact-btn:hover{opacity:0.95}
+/* ヘッダー内のお問い合わせボタン */
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:12px}
+.header-contact{background:transparent;color:#0b69ff;padding:6px 8px;border-radius:6px;text-decoration:none;font-weight:600;display:inline-block}
+.header-contact:hover{background:rgba(11,105,255,0.06)}
+
+/* ハンバーガーメニュー（トグル） */
+.menu-toggle{display:none;border:0;background:transparent;padding:6px;cursor:pointer}
+.menu-toggle .bar{display:block;width:20px;height:2px;background:#222;margin:3px 0;border-radius:2px}
+
+/* モバイルでナビをハンバーガー制御する */
+@media (max-width:800px){
+  .menu-toggle{display:inline-block}
+  .main-nav{display:none;position:absolute;top:64px;right:16px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.08);flex-direction:column;gap:8px}
+  .main-nav a{display:block;padding:8px 10px}
+  .main-nav.open{display:flex}
+  .header-actions{gap:8px}
+  .search-form input{min-width:120px}
+}
 
 /* レスポンシブ調整 */
 @media (max-width:800px){
-  .quick-contact{justify-content:center;margin-bottom:10px}
-  .contact-btn{width:100%;text-align:center}
+  .header-inner{padding:10px}
+  .main-nav{display:none}
+  .header-actions{gap:8px}
+  .search-form input{min-width:120px}
+  .header-contact{padding:10px 12px}
   .quick-item{padding:12px}
 }
 
 
 /* bottom-cta：2.png を背景に見せる */
-.bottom-cta{margin-top:40px;padding:48px 0;background-image:url('/2.png');background-size:cover;background-position:center;border-radius:8px;color:#fff}
-.bottom-cta .cta-overlay{display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.25));padding:24px;border-radius:6px}
-.bottom-cta h2{margin:0;font-size:1.4rem}
-.bottom-cta p{margin:6px 0 0;color:rgba(255,255,255,0.9)}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none}
+.btn.primary{background:var(--accent);color:#fff}
 .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none}
 .btn.primary{background:var(--accent);color:#fff}
 

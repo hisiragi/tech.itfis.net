@@ -27,6 +27,12 @@
                         <input type="search" name="q" id="search-q" placeholder="サイト内を検索" aria-label="検索">
                         <input type="hidden" name="ie" value="utf-8">
                     </form>
+                    <a class="header-contact" href="/contact/">お問い合わせ</a>
+                    <button class="menu-toggle" aria-label="メニュー" aria-controls="main-navigation" aria-expanded="false" onclick="toggleMenu(this)">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
                 </div>
             </div>
         </header>
@@ -41,9 +47,6 @@
                 <!-- ホーム用のクイックメニュー（カテゴリ分けしないフラットリスト） -->
                 <!-- 編集しやすいように、以下のリスト項目を追加／変更してください -->
                 <div class="quick-menu">
-                    <div class="quick-contact">
-                        <a class="btn contact-btn" href="/contact/">お問い合わせ</a>
-                    </div>
                     <ul>
                         <li class="quick-item">
                             <a class="quick-link" href="/category/servers/monitoring.html">監視設定ガイド</a>
@@ -66,15 +69,7 @@
             </section>
         </main>
 
-        <!-- ページ一番下に 2.png のようなビジュアル要素を表示（お問い合わせリンクは削除） -->
-        <section class="bottom-cta" role="region" aria-label="フッターのビジュアルエリア">
-            <div class="cta-overlay container">
-                <div class="cta-text">
-                    <h2>資料を探してますか？</h2>
-                    <p>必要な資料が見つからない場合はサイト内のクイックメニューから直接アクセスしてください。</p>
-                </div>
-            </div>
-        </section>
+        
 
         <footer class="site-footer">
             <div class="container">
@@ -95,6 +90,19 @@
             }
             qElem.value = q;
             return true;
+        }
+        // ハンバーガーメニュー開閉
+        function toggleMenu(button){
+            var nav = document.querySelector('.main-nav');
+            if(!nav) return;
+            var expanded = button.getAttribute('aria-expanded') === 'true';
+            if(expanded){
+                nav.classList.remove('open');
+                button.setAttribute('aria-expanded','false');
+            } else {
+                nav.classList.add('open');
+                button.setAttribute('aria-expanded','true');
+            }
         }
     </script>
 
