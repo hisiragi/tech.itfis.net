@@ -2,5 +2,17 @@
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
+  },
+  "name": "tech.itfis.net",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'No build needed'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
   }
-}
